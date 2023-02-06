@@ -39,10 +39,5 @@ namespace FindMaximumProblem
             }
             throw new Exception("firstValue ,SecondValue and thirdValue are same");
         }
-        public T MaxMethod()
-        {
-            T max = GenericMaximum<T>.MaxValueCheck(this.firstValue, this.secondValue, this.thirdValue);
-            return max;
-        }
     }
 }
