@@ -9,13 +9,13 @@ namespace FindMaximumProblem
     public class MaximumNumberCheck
     {
         /// <summary>
-        /// This method is used to find float maximum number.
+        /// This method is used to find string maximum number.
         /// </summary>
         /// <param name="firstValue"></param>
         /// <param name="secondValue"></param>
         /// <param name="thirdValue"></param>
         /// <returns></returns>
-        public static float MaxFloatNumberCheck(float firstValue, float secondValue, float thirdValue)
+        public static string MaxStringNumberCheck(string firstValue, string secondValue, string thirdValue)
         {
             if (firstValue.CompareTo(secondValue) > 0 && firstValue.CompareTo(thirdValue) > 0)
             {

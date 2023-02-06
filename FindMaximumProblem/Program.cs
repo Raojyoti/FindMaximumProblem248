@@ -12,7 +12,11 @@
             {
                 case 1:
                     Console.Clear();
-                    float result = MaximumNumberCheck.MaxFloatNumberCheck(101.25f, 5.52f, 81.30f);
+                    Console.WriteLine("Please enter three values to find maximum number:");
+                    string firstValue = Console.ReadLine();
+                    string secondValue = Console.ReadLine();
+                    string thirdValue = Console.ReadLine();
+                    string result = MaximumNumberCheck.MaxStringNumberCheck(firstValue, secondValue,thirdValue);
                     Console.WriteLine("{0} is the maximum number", result);
                     break;
                 case 3:
