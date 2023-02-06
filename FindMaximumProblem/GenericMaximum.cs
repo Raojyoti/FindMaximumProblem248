@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace FindMaximumProblem
 {
-    public class MaximumNumberCheck
+    public class GenericMaximum<T> where T : IComparable
     {
         /// <summary>
-        /// This method is used to find float maximum number.
+        /// This method is used to find maximum value using Generic.
         /// </summary>
         /// <param name="firstValue"></param>
         /// <param name="secondValue"></param>
         /// <param name="thirdValue"></param>
         /// <returns></returns>
-        public static float MaxFloatNumberCheck(float firstValue, float secondValue, float thirdValue)
+        public static T MaxValueCheck(T firstValue, T secondValue, T thirdValue)
         {
             if (firstValue.CompareTo(secondValue) > 0 && firstValue.CompareTo(thirdValue) > 0)
             {
