@@ -8,6 +8,14 @@ namespace FindMaximumProblem
 {
     public class GenericMaximum<T> where T : IComparable
     {
+        public T firstValue, secondValue, thirdValue;
+        //parameteric constructor
+        public GenericMaximum(T firstValue, T secondValue, T thirdValue)
+        {
+            this.firstValue = firstValue;
+            this.secondValue = secondValue;
+            this.thirdValue = thirdValue;
+        }
         /// <summary>
         /// This method is used to find maximum value using Generic.
         /// </summary>
@@ -15,13 +23,6 @@ namespace FindMaximumProblem
         /// <param name="secondValue"></param>
         /// <param name="thirdValue"></param>
         /// <returns></returns>
-        public T firstValue, secondValue, thirdValue;
-        public GenericMaximum(T firstValue, T secondValue, T thirdValue)
-        {
-            this.firstValue = firstValue;
-            this.secondValue = secondValue;
-            this.thirdValue = thirdValue;
-        }
         public static T MaxValueCheck(T firstValue, T secondValue, T thirdValue)
         {
             if (firstValue.CompareTo(secondValue) > 0 && firstValue.CompareTo(thirdValue) > 0)
