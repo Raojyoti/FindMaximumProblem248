@@ -15,6 +15,13 @@ namespace FindMaximumProblem
         /// <param name="secondValue"></param>
         /// <param name="thirdValue"></param>
         /// <returns></returns>
+        public T firstValue, secondValue, thirdValue;
+        public GenericMaximum(T firstValue, T secondValue, T thirdValue)
+        {
+            this.firstValue = firstValue;
+            this.secondValue = secondValue;
+            this.thirdValue = thirdValue;
+        }
         public static T MaxValueCheck(T firstValue, T secondValue, T thirdValue)
         {
             if (firstValue.CompareTo(secondValue) > 0 && firstValue.CompareTo(thirdValue) > 0)
@@ -30,6 +37,11 @@ namespace FindMaximumProblem
                 return thirdValue;
             }
             throw new Exception("firstValue ,SecondValue and thirdValue are same");
+        }
+        public T MaxMethod()
+        {
+            T max = GenericMaximum<T>.MaxValueCheck(this.firstValue, this.secondValue, this.thirdValue);
+            return max;
         }
     }
 }
