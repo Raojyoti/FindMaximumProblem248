@@ -17,8 +17,8 @@
                     string secondValue = Console.ReadLine();
                     string thirdValue = Console.ReadLine();
                     Console.WriteLine("String maximum number:\n-----------------------------");
-                    string result = GenericMaximum<string>.MaxValueCheck(firstValue,secondValue,thirdValue);
-                    Console.WriteLine("{0} is the string maximum value\n", result);
+                    GenericMaximum<string> genericString = new GenericMaximum<string>(firstValue, secondValue, thirdValue);
+                    genericString.TestMaxMethod();
                     break;
                 case 2:
                     Console.Clear();
@@ -27,8 +27,8 @@
                     int secondNumber = Convert.ToInt32(Console.ReadLine());
                     int thirdNumber = Convert.ToInt32(Console.ReadLine());
                     Console.WriteLine("Integer maximum number:\n------------------------------");
-                    int result1 = GenericMaximum<int>.MaxValueCheck(firstNumber, secondNumber, thirdNumber);
-                    Console.WriteLine("{0} is theinteger  maximum value\n", result1);
+                    GenericMaximum<int> genericInteger = new GenericMaximum<int>(firstNumber, secondNumber, thirdNumber);
+                    genericInteger.TestMaxMethod();
                     break;
                 case 3:
                     Console.Clear();
@@ -37,8 +37,8 @@
                     double secondNum = Convert.ToDouble(Console.ReadLine());
                     double thirdNum = Convert.ToDouble(Console.ReadLine());
                     Console.WriteLine("float maximum number:\n---------------------------------");
-                    double result2 = GenericMaximum<double>.MaxValueCheck(firstNum,secondNum,thirdNum);
-                    Console.WriteLine("{0} is the float maximum value\n", result2);
+                    GenericMaximum<double> genericFloat = new GenericMaximum<double>(firstNum, secondNum, thirdNum);
+                    genericFloat.TestMaxMethod();
                     break;
                 case 4:
                     Console.Clear();

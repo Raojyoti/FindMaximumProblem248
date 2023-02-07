@@ -39,5 +39,10 @@ namespace FindMaximumProblem
             }
             throw new Exception("firstValue ,SecondValue and thirdValue are same");
         }
+        public void TestMaxMethod()
+        {
+            T result= MaxValueCheck(firstValue, secondValue, thirdValue);  
+            Console.WriteLine("Max Value: "+result);
+        }
     }
 }
