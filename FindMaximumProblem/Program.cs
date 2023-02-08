@@ -6,7 +6,7 @@
         {
             Console.WriteLine("Welcome to the Find Maximum Problems Using Generics");
             Console.WriteLine("Please select given options");
-            Console.WriteLine("1.PrintStringSortValuesUsingGenericConcepts\n2.PrintIntegerSortValuesUsingGenericConcepts\n3.PrintFloatSortValuesUsingGenericConcepts\n4.Exit\n");
+            Console.WriteLine("1.PrintStringMaximumValueUsingGenericConcepts\n2.PrintIntegerMaximumValueUsingGenericConcepts\n3.PrintFloatMaximumValueUsingGenericConcepts\n4.Exit\n");
             int option=Convert.ToInt32(Console.ReadLine());
             switch(option)
             {
