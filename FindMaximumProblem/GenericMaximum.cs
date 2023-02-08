@@ -8,41 +8,35 @@ namespace FindMaximumProblem
 {
     public class GenericMaximum<T> where T : IComparable
     {
-        public T firstValue, secondValue, thirdValue;
+        public T[] value;
         //parameteric constructor
-        public GenericMaximum(T firstValue, T secondValue, T thirdValue)
+        public GenericMaximum(T[] value)
         {
-            this.firstValue = firstValue;
-            this.secondValue = secondValue;
-            this.thirdValue = thirdValue;
+            this.value = value;
         }
         /// <summary>
-        /// This method is used to find maximum value using Generic.
+        /// This method is used to sort the values using Generic.
         /// </summary>
-        /// <param name="firstValue"></param>
-        /// <param name="secondValue"></param>
-        /// <param name="thirdValue"></param>
-        /// <returns></returns>
-        public static T MaxValueCheck(T firstValue, T secondValue, T thirdValue)
+        /// <param name="value"></param>
+
+        public T[] Sort(T[] value)
         {
-            if (firstValue.CompareTo(secondValue) > 0 && firstValue.CompareTo(thirdValue) > 0)
-            {
-                return firstValue;
-            }
-            else if (secondValue.CompareTo(firstValue) > 0 && secondValue.CompareTo(thirdValue) > 0)
-            {
-                return secondValue;
-            }
-            else if (thirdValue.CompareTo(firstValue) > 0 && thirdValue.CompareTo(secondValue) > 0)
-            {
-                return thirdValue;
-            }
-            throw new Exception("firstValue ,SecondValue and thirdValue are same");
+            Array.Sort(value);
+            return value;
         }
-        public void TestMaxMethod()
+        public void PrinSortValue()
         {
-            T result= MaxValueCheck(firstValue, secondValue, thirdValue);  
-            Console.WriteLine("Max Value: "+result);
+            Console.WriteLine("\nBefore Sorted elements are: \n-------------------------");
+            foreach (T item in value)
+            {
+                Console.WriteLine(item);
+            }
+            T[] sortResult = Sort(this.value);
+            Console.WriteLine("\nAfter Sorted elements are: \n--------------------------");
+            foreach (T item in sortResult) 
+            {
+                Console.WriteLine(item);
+            }
         }
     }
 }
