@@ -14,19 +14,19 @@
                     Console.Clear();
                     string[] arrString = { "Mango", "Banana", "Orange", "Peach" };
                     GenericMaximum<string> genericString = new GenericMaximum<string>(arrString);
-                    genericString.PrinSortValue();
+                    genericString.PrintMaxValue();
                     break;
                 case 2:
                     Console.Clear();
                     int[] arrInteger = { 105, 2159, 1125, 789, 998 };
                     GenericMaximum<int> genericInteger = new GenericMaximum<int>(arrInteger);
-                    genericInteger.PrinSortValue();
+                    genericInteger.PrintMaxValue();
                     break;
                 case 3:
                     Console.Clear();
                     float[] arrFloat = { 105.25f, 25.9f, 350.29f, 78.925f, 998.8f };
                     GenericMaximum<float> genericFloat = new GenericMaximum<float>(arrFloat);
-                    genericFloat.PrinSortValue();
+                    genericFloat.PrintMaxValue();
                     break;
                 case 4:
                     Console.Clear();

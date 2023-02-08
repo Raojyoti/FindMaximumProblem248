@@ -24,19 +24,26 @@ namespace FindMaximumProblem
             Array.Sort(value);
             return value;
         }
-        public void PrinSortValue()
+        public T MaxValue(params T[] value)
         {
-            Console.WriteLine("\nBefore Sorted elements are: \n-------------------------");
+            T maxValue = value.Max();
+            return maxValue;
+        }
+        public void PrintMaxValue()
+        {
+            T result = MaxValue(this.value);
+            Console.WriteLine("Before Sorted elements are: \n-------------------------");
             foreach (T item in value)
             {
                 Console.WriteLine(item);
             }
             T[] sortResult = Sort(this.value);
-            Console.WriteLine("\nAfter Sorted elements are: \n--------------------------");
-            foreach (T item in sortResult) 
+            Console.WriteLine("\nAfter Sorted elements are: \n-----------------------");
+            foreach (T item in sortResult)
             {
                 Console.WriteLine(item);
             }
+            Console.WriteLine("\nMaximum value: " + result);
         }
     }
 }
